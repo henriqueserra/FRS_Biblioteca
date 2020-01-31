@@ -5,7 +5,7 @@ using System.Xml.XPath;
 
 namespace FRS_Biblioteca
     {
-    internal class Notas
+    public class Notas
         {
         /// <summary>
         /// Construtor da classe notas

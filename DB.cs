@@ -1,11 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Configuration;
 using System.Data.SqlClient;
 
 namespace FRS_Biblioteca
     {
-    internal class DB
+    public class DB
         {
         /// <summary>
         /// Executa comando SLQ (String)
@@ -14,8 +13,7 @@ namespace FRS_Biblioteca
         /// <returns>Campo Returns</returns>
         public static bool ExecutaSql(string comandosql)
             {
-            var configuracao = ConfigurationManager.AppSettings;
-            var cs = configuracao["SQL Server"];
+            var cs = Variaveis.ObtemConnectionString();
             var conexao = new SqlConnection(cs);
             SqlCommand cmd = new SqlCommand(comandosql, conexao);
             try
@@ -46,8 +44,7 @@ namespace FRS_Biblioteca
         /// </summary>
         public static bool TestaNfeDB(FRS_Biblioteca.Notas nota)
             {
-            var configuracao = ConfigurationManager.AppSettings;
-            var cs = configuracao["SQL Server"];
+            var cs = Variaveis.ObtemConnectionString();
             var conexao = new SqlConnection(cs);
             string comandosql = $"select * from dbo.Notas_Fiscais where nCFe = '{nota.NCFe}'";
             SqlCommand cmd = new SqlCommand(comandosql, conexao);
@@ -77,8 +74,7 @@ namespace FRS_Biblioteca
 
         public static bool GravaProdutosVendidos(string nCFe, string Data, string Vendavel, string CodVendavel, string ValorVendavel, string ValorDesconto, string ValorVendido)
             {
-            var configuracao = ConfigurationManager.AppSettings;
-            var cs = configuracao["SQL Server"];
+            var cs = Variaveis.ObtemConnectionString();
             var conexao = new SqlConnection(cs);
             string comandosql = $"INSERT INTO [LojaDB].[dbo].[Vendas] "+
                 $"([nCFe],[Data],[Vendavel],[CodVendavel],[ValorVendavel],[ValorDesconto],[ValorVendido]) "+
@@ -111,8 +107,7 @@ namespace FRS_Biblioteca
         public static List<string> NotasProcessadas()
             {
             var resultado = new List<string>();
-            var configuracao = ConfigurationManager.AppSettings;
-            var cs = configuracao["SQL Server"];
+            var cs = Variaveis.ObtemConnectionString();
             var conexao = new SqlConnection(cs);
             string comandosql = "select Arquivo from dbo.Notas_Fiscais order by Arquivo";
             SqlCommand cmd = new SqlCommand(comandosql, conexao);
@@ -141,8 +136,7 @@ namespace FRS_Biblioteca
         public static List<string> VendaveisProcessados()
             {
             var resultado = new List<string>();
-            var configuracao = ConfigurationManager.AppSettings;
-            var cs = configuracao["SQL Server"];
+            var cs = Variaveis.ObtemConnectionString();
             var conexao = new SqlConnection(cs);
             string comandosql = "select nCFe from dbo.Vendas order by nCFe";
             SqlCommand cmd = new SqlCommand(comandosql, conexao);

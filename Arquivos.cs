@@ -6,11 +6,12 @@ using System.Linq;
 
 namespace FRS_Biblioteca
     {
-    internal class Arquivos
+    public class Arquivos
         {
-        public static List<String> CarregaListaArquivos(string path)
+        public static List<String> CarregaListaArquivos()
             {
-            return Directory.EnumerateFiles(path, "*.xml", SearchOption.TopDirectoryOnly).ToList();
+            string origem = FRS_Biblioteca.Variaveis.ObtemOrigem();
+            return Directory.EnumerateFiles(origem, "*.xml", SearchOption.TopDirectoryOnly).ToList();
             }
 
         public static void MoveArquivo(string arquivo)
@@ -32,6 +33,11 @@ namespace FRS_Biblioteca
                 FRS_Biblioteca.Log erro = new Log("MoveArquivo", $"Erro tentando mover o arquivo de {pathdestino} para {pathorigem}", ex.ToString());
                 Log.GravaLog(erro);
                 }
+            }
+
+        public static void ArquivoOk(string arquivo)
+            {
+            throw new NotImplementedException();
             }
         }
     }
