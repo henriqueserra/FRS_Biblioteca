@@ -1,0 +1,5 @@
+C:\Users\Henrique\source\repos\FRS_Biblioteca\bin\Debug\FRS_Biblioteca.dll
+C:\Users\Henrique\source\repos\FRS_Biblioteca\bin\Debug\FRS_Biblioteca.pdb
+C:\Users\Henrique\source\repos\FRS_Biblioteca\obj\Debug\FRS_Biblioteca.csprojAssemblyReference.cache
+C:\Users\Henrique\source\repos\FRS_Biblioteca\obj\Debug\FRS_Biblioteca.dll
+C:\Users\Henrique\source\repos\FRS_Biblioteca\obj\Debug\FRS_Biblioteca.pdb
