@@ -161,5 +161,63 @@ namespace FRS_Biblioteca
                 }
             return resultado;
             }
+
+        public static List<string> ExecutaStoredProcedure(string storedprocedure)
+            {
+            var resultado = new List<string>();
+            var cs = Variaveis.ObtemConnectionString();
+            var conexao = new SqlConnection(cs);
+            string comandosql = "EXECUTE dbo."+storedprocedure;
+            SqlCommand cmd = new SqlCommand(comandosql, conexao);
+            try
+                {
+                cmd.Connection.Open();
+                var reader = cmd.ExecuteReader();
+                while (reader.Read())
+                    {
+                    resultado.Add(reader[0].ToString());
+                    }
+                }
+            catch (Exception ex)
+                {
+                FRS_Biblioteca.Log log = new Log("ExecutaStoredProcedure", $"Erro ao executar stored procedure {storedprocedure}", ex.Message);
+                FRS_Biblioteca.Log.GravaLog(log);
+                }
+            finally
+                {
+                cmd.Connection.Close();
+                cmd.Dispose();
+                }
+            return resultado;
+            }
+
+        public static List<string> ExecutaSQLparalista(string comandoSQL)
+            {
+            var resultado = new List<string>();
+            var cs = Variaveis.ObtemConnectionString();
+            var conexao = new SqlConnection(cs);
+            string comandosql = comandoSQL;
+            SqlCommand cmd = new SqlCommand(comandosql, conexao);
+            try
+                {
+                cmd.Connection.Open();
+                var reader = cmd.ExecuteReader();
+                while (reader.Read())
+                    {
+                    resultado.Add(reader[0].ToString());
+                    }
+                }
+            catch (Exception ex)
+                {
+                FRS_Biblioteca.Log log = new Log(System.Reflection.MethodBase.GetCurrentMethod().Name, $"Erro ao executar stored procedure {comandoSQL}", ex.Message);
+                FRS_Biblioteca.Log.GravaLog(log);
+                }
+            finally
+                {
+                cmd.Connection.Close();
+                cmd.Dispose();
+                }
+            return resultado;
+            }
         }
     }

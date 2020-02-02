@@ -35,9 +35,31 @@ namespace FRS_Biblioteca
                 }
             }
 
-        public static void ArquivoOk(string arquivo)
+        public static bool ArquivoOk(string arquivo)
             {
-            throw new NotImplementedException();
+            bool teste = false;
+            int contagem = 1;
+            while (contagem<=5000&&teste==false)
+                {
+                try
+                    {
+                    string[] balde1 = File.ReadAllLines(arquivo);
+                    teste=true;
+                    }
+                catch (IOException)
+                    {
+                    contagem++;
+                    teste=false;
+                    }
+                }
+            if (teste)
+                {
+                return true;
+                }
+            else
+                {
+                return false;
+                }
             }
         }
     }
