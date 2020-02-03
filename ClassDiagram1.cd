@@ -10,7 +10,7 @@
   <Class Name="FRS_Biblioteca.DB">
     <Position X="4" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>ABAAAAAAAAAAAAAEAAAAAAAAIAAAAAAAAAgAQAAAAAA=</HashCode>
+      <HashCode>ABAAAAAAAAAAAAAEAAAAAAAAIAAAgAAAAAgAQABAAAA=</HashCode>
       <FileName>DB.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -29,10 +29,17 @@
     </TypeIdentifier>
   </Class>
   <Class Name="FRS_Biblioteca.Variaveis">
-    <Position X="4" Y="2.5" Width="1.5" />
+    <Position X="4" Y="3.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAABAAABAABAAAAAAA=</HashCode>
       <FileName>Variaveis.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FRS_Biblioteca.Usuario">
+    <Position X="5.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAABAAAAAACAAAAAAAAAIAAEAAAA=</HashCode>
+      <FileName>Usuario.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />

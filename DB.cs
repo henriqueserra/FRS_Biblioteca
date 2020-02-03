@@ -6,6 +6,7 @@ namespace FRS_Biblioteca
     {
     public class DB
         {
+        //todo: Deve ser criado um método para checar se o banco de dados é acessível
         /// <summary>
         /// Executa comando SLQ (String)
         /// </summary>

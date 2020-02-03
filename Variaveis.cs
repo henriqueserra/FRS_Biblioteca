@@ -1,4 +1,5 @@
-﻿using System.Configuration;
+﻿using System.Collections.Generic;
+using System.Configuration;
 
 namespace FRS_Biblioteca
     {
@@ -20,6 +21,12 @@ namespace FRS_Biblioteca
             {
             var configuracao = ConfigurationManager.AppSettings;
             return configuracao["Destino"];
+            }
+
+        public static List<string> GetListaUsuarios()
+            {
+            string comando = "SELECT usuario FROM dbo.Usuarios WHERE Ativo = 1 order by usuario";
+            return FRS_Biblioteca.DB.ExecutaSQLparalista(comando);
             }
         }
     }
