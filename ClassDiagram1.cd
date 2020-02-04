@@ -10,7 +10,7 @@
   <Class Name="FRS_Biblioteca.DB">
     <Position X="4" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>ABAAAAAAAAAAAAAEAAAAAAAAIAAAgAAAAAgAQABAAAA=</HashCode>
+      <HashCode>ABAAAAAAAAAAAAAEAAAAAAAAIIAAgAAAAAgAQABAAAA=</HashCode>
       <FileName>DB.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -31,15 +31,22 @@
   <Class Name="FRS_Biblioteca.Variaveis">
     <Position X="4" Y="3.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAABAAABAABAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAQAAAAAAAABAAABAABAAAAAAA=</HashCode>
       <FileName>Variaveis.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="FRS_Biblioteca.Usuario">
     <Position X="5.75" Y="3.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAABAAAAAACAAAAAAAAAIAAEAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAQABAAAAAACAAAAAAAAAIAAEAAAA=</HashCode>
       <FileName>Usuario.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FRS_Biblioteca.Insumos">
+    <Position X="7.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAgAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Insumo.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />

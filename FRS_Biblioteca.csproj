@@ -44,6 +44,8 @@
   <ItemGroup>
     <Compile Include="Arquivos.cs" />
     <Compile Include="DB.cs" />
+    <Compile Include="GlobalVar.cs" />
+    <Compile Include="Insumo.cs" />
     <Compile Include="Log.cs" />
     <Compile Include="Notas.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

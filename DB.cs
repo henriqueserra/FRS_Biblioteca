@@ -220,5 +220,35 @@ namespace FRS_Biblioteca
                 }
             return resultado;
             }
+
+        public static string ExecutaSQLparaString(string comandoSQL)
+            {
+            string resultado = null;
+            var cs = Variaveis.ObtemConnectionString();
+            var conexao = new SqlConnection(cs);
+            string comandosql = comandoSQL;
+            SqlCommand cmd = new SqlCommand(comandosql, conexao);
+            try
+                {
+                cmd.Connection.Open();
+                var reader = cmd.ExecuteReader();
+                while (reader.Read())
+                    {
+                    resultado=reader[0].ToString();
+                    }
+                return resultado;
+                }
+            catch (Exception ex)
+                {
+                FRS_Biblioteca.Log log = new Log(System.Reflection.MethodBase.GetCurrentMethod().Name, $"Erro ao executar stored procedure {comandoSQL}", ex.Message);
+                FRS_Biblioteca.Log.GravaLog(log);
+                }
+            finally
+                {
+                cmd.Connection.Close();
+                cmd.Dispose();
+                }
+            return null;
+            }
         }
     }
