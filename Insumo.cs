@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace FRS_Biblioteca
+﻿namespace FRS_Biblioteca
     {
     public class Insumos
         {
