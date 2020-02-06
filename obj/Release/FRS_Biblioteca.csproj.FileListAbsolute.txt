@@ -6,4 +6,3 @@ D:\OneDrive\Pessoal\Repositorio_Git_Hub\FRS_Biblioteca\bin\Release\BouncyCastle.
 D:\OneDrive\Pessoal\Repositorio_Git_Hub\FRS_Biblioteca\bin\Release\PushbulletSharp.dll
 D:\OneDrive\Pessoal\Repositorio_Git_Hub\FRS_Biblioteca\bin\Release\PushbulletSharp.pdb
 D:\OneDrive\Pessoal\Repositorio_Git_Hub\FRS_Biblioteca\obj\Release\FRS_Biblioteca.csproj.CopyComplete
-D:\OneDrive\Pessoal\Repositorio_Git_Hub\FRS_Biblioteca\obj\Release\FRS_Biblioteca.csprojAssemblyReference.cache
