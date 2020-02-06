@@ -90,7 +90,7 @@ namespace FRS_Biblioteca
                 {
                 cmd.Connection.Open();
                 var reader = cmd.ExecuteReader();
-                if (reader.HasRows)
+                if (reader.HasRows||reader.RecordsAffected>0)
                     {
                     return true;
                     }

@@ -8,5 +8,10 @@
             public static string grupo;
             public static string nome_completo;
             }
+
+        public static class DadosSistema
+            {
+            public static bool logado;
+            }
         }
     }
