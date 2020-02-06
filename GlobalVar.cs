@@ -6,6 +6,7 @@
             {
             public static string nome;
             public static string grupo;
+            public static string nome_completo;
             }
         }
     }

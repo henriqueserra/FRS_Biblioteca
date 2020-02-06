@@ -1,5 +1,4 @@
 D:\OneDrive\Pessoal\Repositorio_Git_Hub\FRS_Biblioteca\bin\Release\FRS_Biblioteca.dll
 D:\OneDrive\Pessoal\Repositorio_Git_Hub\FRS_Biblioteca\bin\Release\FRS_Biblioteca.pdb
-D:\OneDrive\Pessoal\Repositorio_Git_Hub\FRS_Biblioteca\obj\Release\FRS_Biblioteca.csprojAssemblyReference.cache
 D:\OneDrive\Pessoal\Repositorio_Git_Hub\FRS_Biblioteca\obj\Release\FRS_Biblioteca.dll
 D:\OneDrive\Pessoal\Repositorio_Git_Hub\FRS_Biblioteca\obj\Release\FRS_Biblioteca.pdb

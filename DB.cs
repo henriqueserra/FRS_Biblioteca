@@ -21,6 +21,10 @@ namespace FRS_Biblioteca
                 {
                 cmd.Connection.Open();
                 var reader = cmd.ExecuteReader();
+                if (reader.RecordsAffected>0)
+                    {
+                    return true;
+                    }
                 if (!reader.HasRows)
                     {
                     return false;
