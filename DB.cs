@@ -254,5 +254,11 @@ namespace FRS_Biblioteca
                 }
             return null;
             }
+
+        public static void GravaAtividade(string mensagem)
+            {
+            string comandosql = $"INSERT INTO dbo.Atividades ([Usuario],[Data],[Atividade]) VALUES ('{FRS_Biblioteca.GlobalVar.UsuarioLogado.nome}', getdate(), '{mensagem}')";
+            FRS_Biblioteca.DB.ExecutaSql(comandosql);
+            }
         }
     }

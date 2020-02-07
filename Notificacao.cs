@@ -9,6 +9,7 @@ namespace FRS_Biblioteca
         {
         public static void Envianotificação(string texto)
             {
+            FRS_Biblioteca.DB.GravaAtividade(texto);
             var configuracao = ConfigurationManager.AppSettings;
             PushbulletClient client = new PushbulletClient("o.ijhfmbKRI8JAAAjaorTvs3n1I1oHo4qH");
             //var devices = client.CurrentUsersDevices();
