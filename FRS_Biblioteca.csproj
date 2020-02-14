@@ -55,6 +55,7 @@
     <Compile Include="GlobalVar.cs" />
     <Compile Include="Insumo.cs" />
     <Compile Include="Log.cs" />
+    <Compile Include="MonitorV2.cs" />
     <Compile Include="Notas.cs" />
     <Compile Include="Notificacao.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
