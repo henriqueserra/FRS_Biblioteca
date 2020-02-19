@@ -55,12 +55,13 @@
     <Compile Include="GlobalVar.cs" />
     <Compile Include="Insumo.cs" />
     <Compile Include="Log.cs" />
-    <Compile Include="MonitorV2.cs" />
     <Compile Include="Notas.cs" />
     <Compile Include="Notificacao.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Usuario.cs" />
+    <Compile Include="Validacoes.cs" />
     <Compile Include="Variaveis.cs" />
+    <Compile Include="VerificaProcessos.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram1.cd" />

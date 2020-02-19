@@ -1,5 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Configuration;
+using System.Globalization;
+using System.Threading;
 
 namespace FRS_Biblioteca
 {
@@ -27,6 +29,20 @@ namespace FRS_Biblioteca
         {
             string comando = "SELECT usuario FROM dbo.Usuarios WHERE Ativo = 1 order by usuario";
             return FRS_Biblioteca.DB.ExecutaSQLparalista(comando);
+        }
+
+        public static string GetSeparadorNumerico()
+        {
+            CultureInfo current = Thread.CurrentThread.CurrentUICulture;
+
+            if (current.NumberFormat.NumberDecimalSeparator == ",")
+            {
+                return " VÍRGULA ";
+            }
+            else
+            {
+                return " PONTO ";
+            }
         }
     }
 }

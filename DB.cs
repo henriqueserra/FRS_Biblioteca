@@ -79,6 +79,9 @@ namespace FRS_Biblioteca
 
         public static bool GravaProdutosVendidos(string nCFe, string Data, string Vendavel, string CodVendavel, string ValorVendavel, string ValorDesconto, string ValorVendido)
         {
+            string comandosql2 = $"INSERT INTO [LojaDB].[dbo].[A_Processar] " +
+    $"(Vendavel) VALUES ('{Vendavel}')";
+            DB.ExecutaSql(comandosql2);
             var cs = Variaveis.ObtemConnectionString();
             var conexao = new SqlConnection(cs);
             string comandosql = $"INSERT INTO [LojaDB].[dbo].[Vendas] " +

@@ -25,20 +25,41 @@
         /// </summary>
         private string GetSenha(string nome)
         {
-            string comando = $"SELECT password FROM dbo.Usuarios WHERE usuario = '{nome}'";
-            return FRS_Biblioteca.DB.ExecutaSQLparalista(comando)[0];
+            if (nome == "sistema")
+            {
+                return "123456";
+            }
+            else
+            {
+                string comando = $"SELECT password FROM dbo.Usuarios WHERE usuario = '{nome}'";
+                return FRS_Biblioteca.DB.ExecutaSQLparalista(comando)[0];
+            }
         }
 
         private string GetGrupo(string nome)
         {
-            string comando = $"SELECT user_group FROM dbo.Usuarios WHERE usuario = '{nome}'";
-            return FRS_Biblioteca.DB.ExecutaSQLparalista(comando)[0];
+            if (nome == "sistema")
+            {
+                return "Admin";
+            }
+            else
+            {
+                string comando = $"SELECT user_group FROM dbo.Usuarios WHERE usuario = '{nome}'";
+                return FRS_Biblioteca.DB.ExecutaSQLparalista(comando)[0];
+            }
         }
 
         private string GetNomeCompleto(string nome)
         {
-            string comando = $"SELECT Nome FROM dbo.Usuarios WHERE usuario = '{nome}'";
-            return FRS_Biblioteca.DB.ExecutaSQLparalista(comando)[0];
+            if (nome == "sistema")
+            {
+                return "Usuario de sistema";
+            }
+            else
+            {
+                string comando = $"SELECT Nome FROM dbo.Usuarios WHERE usuario = '{nome}'";
+                return FRS_Biblioteca.DB.ExecutaSQLparalista(comando)[0];
+            }
         }
     }
 }

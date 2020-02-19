@@ -25,6 +25,7 @@ namespace FRS_Biblioteca
             else
             {
                 var valor = FRS_Biblioteca.DB.ExecutaSQLparaString("EXEC dbo.sp_TT");
+                if (valor == "") { valor = "0"; }
                 double valordoluble = Convert.ToDouble(valor);
                 return valordoluble.ToString("0.00");
             }

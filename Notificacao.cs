@@ -10,9 +10,18 @@ namespace FRS_Biblioteca
         public static void Envianotificação(string texto)
         {
             FRS_Biblioteca.DB.GravaAtividade(texto);
-            if (FRS_Biblioteca.GlobalVar.UsuarioLogado.grupo != "Admin")
+            var configuracao = ConfigurationManager.AppSettings;
+            bool admin = false;
+
+            if (configuracao["Mensagem para Admin"] == "Yes")
             {
-                var configuracao = ConfigurationManager.AppSettings;
+                admin = true;
+            }
+            bool grupoadmin = (FRS_Biblioteca.GlobalVar.UsuarioLogado.grupo != "Admin");
+
+            if ((admin && grupoadmin) || (!grupoadmin))
+            {
+                configuracao = ConfigurationManager.AppSettings;
                 PushbulletClient client = new PushbulletClient("o.ijhfmbKRI8JAAAjaorTvs3n1I1oHo4qH");
                 if (configuracao["celular1"] == "Yes")
                 {
