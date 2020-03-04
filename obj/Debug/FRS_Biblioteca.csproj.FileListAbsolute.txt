@@ -11,3 +11,4 @@ D:\OneDrive\Pessoal\Repositorio_Git_Hub\FRS_Biblioteca\obj\Debug\FRS_Biblioteca.
 D:\OneDrive\Pessoal\Repositorio_Git_Hub\FRS_Biblioteca\bin\Debug\BouncyCastle.dll
 D:\OneDrive\Pessoal\Repositorio_Git_Hub\FRS_Biblioteca\bin\Debug\PushbulletSharp.dll
 D:\OneDrive\Pessoal\Repositorio_Git_Hub\FRS_Biblioteca\bin\Debug\PushbulletSharp.pdb
+D:\OneDrive\Pessoal\Repositorio_Git_Hub\FRS_Biblioteca\obj\Debug\FRS_Biblioteca.csprojAssemblyReference.cache
