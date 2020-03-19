@@ -1,19 +1,32 @@
-﻿using System;
+﻿using Dapper;
+using System;
+using System.Data.SqlClient;
 
 namespace FRS_Biblioteca
 {
     public class Consultas
     {
         public static string GetTC()
+
         {
-            if (FRS_Biblioteca.DB.ExecutaSQLparaString("EXEC dbo.sp_TC") == null)
+            using (SqlConnection conexaoBD = new SqlConnection(Variaveis.ObtemConnectionString()))
             {
-                return "0";
+                var repo = conexaoBD.Execute(@"select count(nCFe) from dbo.Notas_Fiscais where cast(data as date) = cast(getdate() as date)");
+                if (repo == -1)
+                {
+                    repo = 0;
+                }
+                return Convert.ToString(repo);
             }
-            else
-            {
-                return FRS_Biblioteca.DB.ExecutaSQLparaString("EXEC dbo.sp_TC");
-            }
+
+            //if (FRS_Biblioteca.DB.ExecutaSQLparaString("EXEC dbo.sp_TC") == null)
+            //{
+            //    return "0";
+            //}
+            //else
+            //{
+            //    return FRS_Biblioteca.DB.ExecutaSQLparaString("EXEC dbo.sp_TC");
+            //}
         }
 
         public static string GetTT()

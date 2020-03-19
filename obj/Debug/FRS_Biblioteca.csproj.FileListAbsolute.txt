@@ -12,3 +12,7 @@ D:\OneDrive\Pessoal\Repositorio_Git_Hub\FRS_Biblioteca\bin\Debug\BouncyCastle.dl
 D:\OneDrive\Pessoal\Repositorio_Git_Hub\FRS_Biblioteca\bin\Debug\PushbulletSharp.dll
 D:\OneDrive\Pessoal\Repositorio_Git_Hub\FRS_Biblioteca\bin\Debug\PushbulletSharp.pdb
 D:\OneDrive\Pessoal\Repositorio_Git_Hub\FRS_Biblioteca\obj\Debug\FRS_Biblioteca.csprojAssemblyReference.cache
+D:\OneDrive\Pessoal\Repositorio_Git_Hub\FRS_Biblioteca\bin\Debug\Dapper.Contrib.dll
+D:\OneDrive\Pessoal\Repositorio_Git_Hub\FRS_Biblioteca\bin\Debug\Dapper.dll
+D:\OneDrive\Pessoal\Repositorio_Git_Hub\FRS_Biblioteca\bin\Debug\Dapper.xml
+D:\OneDrive\Pessoal\Repositorio_Git_Hub\FRS_Biblioteca\bin\Debug\Dapper.Contrib.xml
