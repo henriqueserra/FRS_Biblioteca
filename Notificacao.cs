@@ -19,33 +19,33 @@ namespace FRS_Biblioteca
             }
             bool grupoadmin = (FRS_Biblioteca.GlobalVar.UsuarioLogado.grupo != "Admin");
 
-            if ((admin && grupoadmin) || (!grupoadmin))
-            {
-                configuracao = ConfigurationManager.AppSettings;
-                PushbulletClient client = new PushbulletClient("o.ijhfmbKRI8JAAAjaorTvs3n1I1oHo4qH");
-                if (configuracao["celular1"] == "Yes")
-                {
-                    PushNoteRequest request1 = new PushNoteRequest
-                    {
-                        DeviceIden = "ujy7mvFtukmsjE5NB4jvkO",
-                        Title = texto,
-                        Body = texto
-                    };
+            //if ((admin && grupoadmin) || (!grupoadmin))
+            //{
+            //    configuracao = ConfigurationManager.AppSettings;
+            //    PushbulletClient client = new PushbulletClient("o.ijhfmbKRI8JAAAjaorTvs3n1I1oHo4qH");
+            //    if (configuracao["celular1"] == "Yes")
+            //    {
+            //        PushNoteRequest request1 = new PushNoteRequest
+            //        {
+            //            DeviceIden = "ujy7mvFtukmsjE5NB4jvkO",
+            //            Title = texto,
+            //            Body = texto
+            //        };
 
-                    PushResponse response1 = client.PushNote(request1);
-                }
+            //        PushResponse response1 = client.PushNote(request1);
+            //    }
 
-                if (configuracao["celular2"] == "Yes")
-                {
-                    PushNoteRequest request2 = new PushNoteRequest
-                    {
-                        DeviceIden = "ujy7mvFtukmsjBmQj6ywIS",
-                        Title = texto,
-                        Body = texto
-                    };
-                    PushResponse response2 = client.PushNote(request2);
-                }
-            }
+            //    if (configuracao["celular2"] == "Yes")
+            //    {
+            //        PushNoteRequest request2 = new PushNoteRequest
+            //        {
+            //            DeviceIden = "ujy7mvFtukmsjBmQj6ywIS",
+            //            Title = texto,
+            //            Body = texto
+            //        };
+            //        PushResponse response2 = client.PushNote(request2);
+            //    }
+            //}
         }
     }
 }
